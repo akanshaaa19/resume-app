@@ -1,24 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import Layout from "./components/ui/Layout";
+import Home from "./pages/Home";
+
+import { Provider, useDispatch, useSelector } from "react-redux";
+import AuthPage from "./pages/AuthPage";
+import { useEffect } from "react";
+import { authActions } from "./store";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const email = localStorage.getItem("email");
+
+    if (token !== null) {
+      dispatch(authActions.logInHandeler({ email: email, token: token }));
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            isLoggedIn ? (
+              <Navigate to="/edit/templates" replace />
+            ) : (
+              <Navigate to="/auth" replace />
+            )
+          }
+        />
+
+        <Route
+          path="/auth"
+          element={
+            isLoggedIn ? <Navigate to="/edit/templates" /> : <AuthPage />
+          }
+        />
+
+        <Route
+          path="/edit/templates"
+          element={!isLoggedIn && <Navigate to="/auth" />}
+        />
+        <Route
+          path="/edit/personal"
+          element={!isLoggedIn && <Navigate to="/auth" />}
+        />
+        <Route
+          path="/edit/education"
+          element={!isLoggedIn && <Navigate to="/auth" />}
+        />
+        <Route
+          path="/edit/work"
+          element={!isLoggedIn && <Navigate to="/auth" />}
+        />
+        <Route
+          path="/edit/skills"
+          element={!isLoggedIn && <Navigate to="/auth" />}
+        />
+      </Routes>
+
+      {isLoggedIn && <Home />}
+    </>
   );
 }
 
