@@ -1,10 +1,10 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import resume01 from "../../assets/resume-01.png";
-import resume02 from "../../assets/resume-02.png";
-import resume03 from "../../assets/resume-03.png";
-import resume04 from '../../assets/resume-04.png'
+import resume01 from "../assets/resume-01.png"
+import resume02 from "../assets/resume-02.png";
+import resume03 from "../assets/resume-03.png";
+import resume04 from '../assets/resume-04.png'
 import { templateAction } from "../../store";
 
 const templates = [

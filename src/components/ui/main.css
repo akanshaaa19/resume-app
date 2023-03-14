@@ -24,3 +24,35 @@
   margin: 0 auto;
   overflow: hidden;
 }
+
+@media screen and (max-width: 768px){
+  .resume-overlay{
+  left: 6% !important;
+  height: 80vh !important;
+  top: 5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  }
+
+  .resume-overlay #resume{
+    width: 80vw !important;
+    height: 80vh !important;
+    padding: 1.5rem 1rem !important;
+  }
+
+  .resume-overlay .sec-heading{
+    font-size: 1rem;
+  }
+
+  .resume-overlay p, li{
+    font-size: 0.8rem;
+  }
+
+  .resume-overlay .designation{
+    font-size: 1rem;
+  }
+
+  .resume-overlay .name{
+    font-size:1.5rem;
+  }
+}

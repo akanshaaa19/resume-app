@@ -1,10 +1,10 @@
 import "./App.css";
 
 import Layout from "./components/ui/Layout";
-import Home from "./pages/Home";
+import Home from "./components/pages/Home";
 
 import { Provider, useDispatch, useSelector } from "react-redux";
-import AuthPage from "./pages/AuthPage";
+import AuthPage from "./components/pages/AuthPage";
 import { useEffect } from "react";
 import { authActions } from "./store";
 import { Navigate, Route, Routes } from "react-router-dom";

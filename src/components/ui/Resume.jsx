@@ -4,10 +4,11 @@ import "./main.css";
 import { useDispatch, useSelector } from "react-redux";
 import { uiAction } from "../../store";
 
-import Resume01 from "../../Templates/Resume01";
-import Resume02 from "../../Templates/Resume02";
-import Resume03 from "../../Templates/Resume03";
-import Resume04 from "../../Templates/Resume04";
+import Resume01 from "../Templates/Resume01";
+import Resume02 from "../Templates/Resume02";
+import Resume03 from "../Templates/Resume03";
+import Resume04 from "../Templates/Resume04";
+
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 

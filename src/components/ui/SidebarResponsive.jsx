@@ -8,9 +8,9 @@ const navItems = [
   {icon: "", link: "/edit/skills", name: "Skills" },
 ];
 
-function SideBar() {
+function SideBarResponsive() {
   return (
-    <div className="fixed bottom-0 left-0 px-12 py-8 h-screen border-r-2 border-zinc-800 sidebar hidden md:flex flex-col">
+    <div className="fixed bottom-0 left-0  z-20 bg-[#1e1e1e] shadow-xl sidebar-r  px-4 py-8 h-screen  flex md:hidden flex-col">
       {navItems.map((item) => {
         return (
           <NavLink to={item.link}>
@@ -22,4 +22,4 @@ function SideBar() {
   );
 }
 
-export default SideBar;
+export default SideBarResponsive;

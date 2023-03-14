@@ -22,6 +22,10 @@ textarea:focus {
   height: 88vh;
   /* bottom: 0; */
 }
+.sidebar-r{
+  width: 35vw;
+  height: 88vh;
+}
 
 main {
   width: 85vw;
@@ -32,7 +36,7 @@ main {
   /* top: 0; */
 }
 
-.sidebar a.active {
+.sidebar a.active, .sidebar-r a.active {
   color: #a78bfa;
   font-weight: 600;
   white-space: nowrap;
@@ -51,4 +55,17 @@ main {
 
 .auth ::placeholder{
   color: #545151;
+}
+
+@media (max-width: 768px) {
+  body{
+    overflow-x: hidden;
+  }
+  main{
+    height: 100vh;
+    width: 100vw;
+    position: relative !important;
+    /* top: 4rem !important; */
+    /* left: 2rem!important */
+  }
 }
