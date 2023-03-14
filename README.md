@@ -1,4 +1,4 @@
-## [Live Link](akanshaaa19.github.io/resume-app)
+## Check it out [here](akanshaaa19.github.io/resume-app).
 
 ### Log In page
 ![log in page](https://user-images.githubusercontent.com/76031685/224911379-917e9cb9-2cfb-4aff-abeb-f177e4c40388.png)
