@@ -2,11 +2,14 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const uiSlice = createSlice({
   name: "ui",
-  initialState: { showResume: false },
+  initialState: { showResume: false, showSideBar: false },
   reducers: {
     showResume(state, action) {
       state.showResume = action.payload;
     },
+    showSideBar(state, action){
+      state.showSideBar = action.payload;
+    }
   },
 });
 

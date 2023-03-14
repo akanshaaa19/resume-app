@@ -7,12 +7,13 @@ import SideBarResponsive from "./SidebarResponsive";
 
 function Layout(props) {
   const isLoggedIn = useSelector(state=>state.auth.isLoggedIn)
+  const showSideBar = useSelector(state=>state.ui.showSideBar)
 
   return (
     <>
       <Header />
       <SideBar />
-      <SideBarResponsive />
+      {showSideBar && <SideBarResponsive />}
       <main className="flex py-8 justify-center items-center">{props.children}</main>
     </>
   );
