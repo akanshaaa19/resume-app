@@ -15,7 +15,7 @@ function SideBarResponsive() {
   const dispatch = useDispatch()
   return (
     <>
-    <div onClick={()=>{dispatch(uiAction.showSideBar(false))}} className="w-screen absolute top-0 h-screen bg-black opacity-40 z-10" />
+    <div onClick={()=>{dispatch(uiAction.showSideBar(false))}} className="w-screen absolute top-0 h-screen flex md:hidden bg-black opacity-40 z-10" />
     <div className="fixed opacity-1 bottom-0 left-0  z-20 bg-[#1e1e1e] shadow-xl sidebar-r  px-4 py-8 h-screen  flex md:hidden flex-col">
       {navItems.map((item) => {
         return (

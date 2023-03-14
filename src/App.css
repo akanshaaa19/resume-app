@@ -23,7 +23,7 @@ textarea:focus {
   /* bottom: 0; */
 }
 .sidebar-r{
-  width: 35vw;
+  width: 50%;
   height: 93vh;
 }
 
@@ -39,7 +39,7 @@ main {
 .sidebar a.active, .sidebar-r a.active {
   color: #a78bfa;
   font-weight: 600;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 @media print {
