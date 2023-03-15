@@ -13,18 +13,18 @@ textarea:focus {
   outline: none;
 }
 
-.header {
-  height: 12vh;
+header {
+  height: 10vh;
 }
 
 .sidebar {
   width: 15vw;
-  height: 88vh;
+  height: 90vh;
   /* bottom: 0; */
 }
 .sidebar-r{
   width: 50%;
-  height: 93vh;
+  height: 90vh;
 }
 
 main {

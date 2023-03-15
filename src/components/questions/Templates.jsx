@@ -1,11 +1,10 @@
-import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import resume01 from "../assets/resume-01.png"
 import resume02 from "../assets/resume-02.png";
 import resume03 from "../assets/resume-03.png";
 import resume04 from '../assets/resume-04.png'
-import { templateAction } from "../../store";
+import TemplateCard from "../ui/TemplateCard";
 
 const templates = [
   { img: resume01, id: "resume01" },
@@ -15,7 +14,6 @@ const templates = [
 ];
 
 function Templates() {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   return (
@@ -24,14 +22,7 @@ function Templates() {
       <div className="row">
         {templates.map((template) => {
           return (
-            <div
-              onClick={() => {
-                dispatch(templateAction.setTemplate(template.id));
-              }}
-              className="col-6 cursor-pointer border-8 border-[#1e1e1e] rounded-md bg-white py-1"
-            >
-              <img className="rounded-md" src={template.img} />
-            </div>
+           <TemplateCard template={template} />
           );
         })}
       </div>

@@ -107,7 +107,7 @@ function AuthPage() {
       </header> */}
       <Header />
       <section className=" auth h-screen flex ">
-        <div className="w-2/5 h-full flex items-center justify-center">
+        <div className="w-full md:w-2/5 h-full flex items-center justify-center">
           <div className="">
             <h2 className="text-2xl mb-4 font-semibold">
               {isLogIn ? "Log In" : "Sign Up"}
@@ -182,8 +182,9 @@ function AuthPage() {
             //   background:
             // "-webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027)" ,
             background: "linear-gradient(to right, #1e1e1e, #203A43, #2a2a2a)",
+            zIndex: '60'
           }}
-          className="w-3/5 h-full overflow-y-hidden relative"
+          className="w-3/5 h-full overflow-y-hidden hidden md:flex relative"
         >
           <div>
             <div className="">
@@ -191,16 +192,19 @@ function AuthPage() {
                 style={{ top: "2rem", right: "10rem" }}
                 className="h-3/4 absolute drop-shadow-xl rounded-md"
                 src={resume01}
+                alt="resume 1"
               />
               <img
                 style={{ top: "6rem", right: "16rem" }}
                 className="h-3/4 absolute drop-shadow-xl rounded-md"
                 src={resume02}
+                alt="resume-2"
               />
               <img
                 style={{ top: "10rem", right: "22rem" }}
                 className="h-3/4 absolute drop-shadow-xl rounded-md"
                 src={resume03}
+                alt="resume-3"
               />
             </div>
           </div>
