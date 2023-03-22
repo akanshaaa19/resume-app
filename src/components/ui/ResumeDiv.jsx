@@ -13,6 +13,7 @@ import Resume04 from "../Templates/Resume04";
 
 function ResumeDiv() {
   const dispatch = useDispatch();
+  
   const resumeVal = useSelector((state) => state.ui.showResume);
 
   function showResume() {

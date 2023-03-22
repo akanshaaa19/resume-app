@@ -3,7 +3,7 @@ import "./App.css";
 import Layout from "./components/ui/Layout";
 import Home from "./components/pages/Home";
 
-import { Provider, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import AuthPage from "./components/pages/AuthPage";
 import { useEffect } from "react";
 import { authActions } from "./store";
@@ -25,6 +25,7 @@ function App() {
   return (
     <>
       <Routes>
+        
         <Route
           path="/"
           element={
@@ -63,6 +64,7 @@ function App() {
           path="/edit/skills"
           element={!isLoggedIn && <Navigate to="/auth" />}
         />
+
       </Routes>
 
       {isLoggedIn && <Home />}

@@ -13,18 +13,19 @@ function Home() {
 
   return (
     <Layout>
+
     <div className="md:w-1/3 w-full px-16">
     <Routes>
-      {/* <Route path="/" element={<Navigate to="/edit/templates" replace />} /> */}
+      <Route path="/edit/templates" element={<Templates />} />
       <Route path="/edit/personal" element={<PersonalDetails />} />
       <Route path="/edit/education" element={<EducationDetails />} />
       <Route path="/edit/skills" element={<SkillDetails />} />
       <Route path="/edit/work" element={<WorkDetails />} />
-      <Route path="/edit/templates" element={<Templates />} />
-      {/* // <Home /> */}
     </Routes>
     </div>
+
       <ResumeDiv />
+      
     </Layout>
   );
 }

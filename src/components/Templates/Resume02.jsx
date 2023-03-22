@@ -15,21 +15,23 @@ const Resume02 = React.forwardRef((props, ref) => {
           {props.personalDetails.designation}
         </h3>
         <div className="text-center text-sm">
-          <p>
+          <div className="flex justify-between">
             <a
               href={`https://${props.personalDetails.url}`}
               className="underline"
             >
               {props.personalDetails.url}
             </a>
-            | {props.personalDetails.phone} |
+            <p>|</p> 
+            {props.personalDetails.phone}
+            <p>|</p> 
             <a
               href={`mailto:${props.personalDetails.email}`}
               className="underline"
             >
               {props.personalDetails.email}
             </a>
-          </p>
+          </div>
         </div>
       </div>
       <hr className="my-4" />
